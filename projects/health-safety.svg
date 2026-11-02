@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="700" cy="80" r="120" fill="#16a34a" opacity="0.10"/>
+  <circle cx="100" cy="400" r="90" fill="#22c55e" opacity="0.10"/>
+  <!-- Main slide -->
+  <rect x="60" y="60" width="500" height="330" rx="18" fill="white" stroke="#bbf7d0" stroke-width="1.5"/>
+  <rect x="60" y="60" width="500" height="72" rx="18" fill="#16a34a"/>
+  <rect x="60" y="112" width="500" height="20" fill="#16a34a"/>
+  <text x="310" y="90" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Health &amp; Safety in the Workplace</text>
+  <text x="310" y="113" font-family="Arial,sans-serif" font-size="12" fill="#bbf7d0" text-anchor="middle">Module 3: Hazard Identification</text>
+  <!-- Icons row -->
+  <rect x="85" y="155" width="90" height="80" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="130" y="200" font-family="Georgia,serif" font-size="30" text-anchor="middle">⚠️</text>
+  <text x="130" y="225" font-family="Arial,sans-serif" font-size="10" fill="#15803d" text-anchor="middle">Hazards</text>
+  <rect x="195" y="155" width="90" height="80" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="240" y="200" font-family="Georgia,serif" font-size="30" text-anchor="middle">🦺</text>
+  <text x="240" y="225" font-family="Arial,sans-serif" font-size="10" fill="#15803d" text-anchor="middle">PPE</text>
+  <rect x="305" y="155" width="90" height="80" rx="12" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="350" y="200" font-family="Georgia,serif" font-size="30" text-anchor="middle">🚨</text>
+  <text x="350" y="225" font-family="Arial,sans-serif" font-size="10" fill="#15803d" text-anchor="middle">Emergency</text>
+  <rect x="415" y="155" width="90" height="80" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="460" y="200" font-family="Georgia,serif" font-size="30" text-anchor="middle">✅</text>
+  <text x="460" y="225" font-family="Arial,sans-serif" font-size="10" fill="#15803d" text-anchor="middle">Compliance</text>
+  <!-- Scenario text -->
+  <rect x="85" y="252" width="420" height="14" rx="7" fill="#dcfce7"/>
+  <rect x="85" y="274" width="360" height="10" rx="5" fill="#e5e7eb"/>
+  <rect x="85" y="292" width="390" height="10" rx="5" fill="#e5e7eb"/>
+  <rect x="85" y="310" width="340" height="10" rx="5" fill="#e5e7eb"/>
+  <!-- Quiz button -->
+  <rect x="85" y="334" width="160" height="40" rx="10" fill="#16a34a"/>
+  <text x="165" y="359" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Take Quiz →</text>
+  <!-- Side panel -->
+  <rect x="580" y="80" width="180" height="300" rx="16" fill="white" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="670" y="115" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#15803d" text-anchor="middle">Progress</text>
+  <rect x="600" y="128" width="140" height="8" rx="4" fill="#dcfce7"/>
+  <rect x="600" y="128" width="112" height="8" rx="4" fill="#16a34a"/>
+  <text x="670" y="154" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">80% Complete</text>
+  <rect x="600" y="170" width="140" height="28" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="670" y="189" font-family="Arial,sans-serif" font-size="11" fill="#15803d" text-anchor="middle">✅ Module 1</text>
+  <rect x="600" y="206" width="140" height="28" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="670" y="225" font-family="Arial,sans-serif" font-size="11" fill="#15803d" text-anchor="middle">✅ Module 2</text>
+  <rect x="600" y="242" width="140" height="28" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="670" y="261" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">▶ Module 3</text>
+  <rect x="600" y="278" width="140" height="28" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="670" y="297" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">🔒 Module 4</text>
+  <text x="400" y="460" font-family="Georgia,serif" font-size="16" fill="#15803d" text-anchor="middle" opacity="0.6">Health &amp; Safety · Compliance Training</text>
+</svg>
