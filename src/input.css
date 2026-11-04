@@ -22,6 +22,12 @@
 }
 
 @layer base {
+  :root {
+    --curve: 28px;
+  }
+  @media (min-width: 768px) {
+    :root { --curve: 44px; }
+  }
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -52,16 +58,25 @@
 }
 
 @layer components {
-  /* Large floating black section, as in the Blue Carrot reference */
-  .slab {
+  /* Full-width bands that stack like layered sheets: each one curves over the one above */
+  .band {
     position: relative;
+    margin-top: calc(var(--curve) * -1);
+    border-radius: var(--curve) var(--curve) 0 0;
+    padding-bottom: var(--curve);
+  }
+  main > .band:first-child {
+    margin-top: 0;
+  }
+  .band-dark {
     overflow: hidden;
     background: var(--color-ink);
     color: var(--color-cream);
-    border-radius: 24px;
   }
-  @media (min-width: 768px) {
-    .slab { border-radius: 44px; }
+  .band-light {
+    background: var(--color-blush);
+    padding-top: 1.5rem;
+    padding-bottom: calc(var(--curve) + 4rem);
   }
 
   .surface {

@@ -24,6 +24,7 @@ function write(rel, html) {
   fs.writeFileSync(file, html);
 }
 
+const light = (inner) => `<div class="band band-light">${inner}</div>`;
 const iconCache = {};
 function icon(name, cls = "size-5") {
   const brand = {
@@ -96,10 +97,10 @@ function header(p) {
 }
 
 function ctaBlock() {
-  return `<section id="contact" class="px-3 pt-24 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] px-6 py-16 text-center sm:px-12 sm:py-24">
+  return `<section id="contact" class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-20 text-center sm:px-6 sm:py-28">
     <div class="glow -left-20 -top-24 size-[380px] bg-rose/25"></div>
-    <div class="glow -bottom-32 -right-10 size-[360px] bg-rose-soft/20"></div>
+    <div class="glow bottom-28 -right-10 size-[360px] bg-rose-soft/20"></div>
     <div class="reveal relative mx-auto max-w-3xl">
       <span class="pill pill-dark">Contact</span>
       <h2 class="mt-6 font-display text-[clamp(2.4rem,6vw,4.75rem)] font-extrabold leading-[1.02] text-cream">Let's build the future of learning.</h2>
@@ -116,13 +117,15 @@ function ctaBlock() {
 }
 
 function footer() {
-  return `<footer class="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-ink/65 sm:flex-row">
-  <p>&copy; ${YEAR} ${esc(S.name)} &middot; ${esc(S.title)}</p>
-  <ul class="flex gap-5 font-semibold">
-    <li><a class="hover:text-rose-ink" href="/work/">Case studies</a></li>
-    <li><a class="hover:text-rose-ink" href="/courses/">Courses</a></li>
-    <li><a class="hover:text-rose-ink" href="/resume/">Resume</a></li>
-  </ul>
+  return `<footer class="bg-ink text-cream/65">
+  <div class="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-3 pb-10 pt-2 text-sm sm:flex-row sm:px-6">
+    <p>&copy; ${YEAR} ${esc(S.name)} &middot; ${esc(S.title)}</p>
+    <ul class="flex gap-5 font-semibold">
+      <li><a class="hover:text-rose" href="/work/">Case studies</a></li>
+      <li><a class="hover:text-rose" href="/courses/">Courses</a></li>
+      <li><a class="hover:text-rose" href="/resume/">Resume</a></li>
+    </ul>
+  </div>
 </footer>`;
 }
 
@@ -261,11 +264,11 @@ function home() {
     [String(cases.length), "Client case studies"],
     ["2", "Authoring suites: Storyline 360 and Rise 360"],
   ];
-  const hero = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px]">
+  const hero = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px]">
     <div class="glow -right-24 -top-24 size-[440px] bg-rose/30"></div>
     <div class="glow -bottom-40 left-1/4 size-[380px] bg-rose-soft/20"></div>
-    <div class="relative grid items-center gap-12 p-6 sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:p-16 lg:pb-12">
+    <div class="relative grid items-center gap-12 px-3 py-10 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:py-14">
       <div>
         <p class="pill pill-dark gap-2.5 !px-4 !py-1.5 text-sm">
           <span class="ping-dot relative inline-flex size-2.5"><span class="relative size-2.5 rounded-full bg-[#22c55e]"></span></span>
@@ -287,7 +290,7 @@ function home() {
         <span class="pill absolute -bottom-4 right-10 gap-1.5 !bg-white !px-3.5 !py-2 text-sm shadow-xl">${icon("sparkles", "size-4 text-rose-ink")} Live demos</span>
       </div>
     </div>
-    <dl class="relative grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 px-6 py-7 sm:px-10 lg:px-16 lg:py-9">
+    <dl class="relative mx-3 grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 py-7 sm:mx-6 lg:py-9">
       ${stats.map(([n, l], i) => `<div class="${i ? "pl-4 sm:pl-8" : "pr-4"}"><dt class="font-display text-4xl font-extrabold text-cream sm:text-5xl">${n}</dt><dd class="mt-1 text-xs leading-snug text-cream/60 sm:text-sm">${l}</dd></div>`).join("")}
     </dl>
   </div>
@@ -299,8 +302,8 @@ function home() {
 </section>`;
 
   const featured = [...courses.filter((c) => c.featured), ...courses.filter((c) => !c.featured && c.preview)].slice(0, 6);
-  const coursesSec = `<section id="courses" class="px-3 pt-24 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-14">
+  const coursesSec = `<section id="courses" class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-14 sm:px-6 lg:py-20">
     <div class="glow -right-20 -top-20 size-[360px] bg-rose/20"></div>
     <div class="relative">
       ${sectionHead({ eyebrow: "Courses", title: "Courses I've built", text: "Interactive courses and microlearning in Storyline 360 and Rise 360, each with a live demo you can try.", linkHref: "/courses/", linkLabel: "All courses", dark: true })}
@@ -360,13 +363,13 @@ function home() {
     desc: S.description,
     p: "/",
     ld,
-    body: hero + clientsStrip() + work + coursesSec + services + about + ctaBlock(),
+    body: hero + light(clientsStrip() + work) + coursesSec + light(services + about) + ctaBlock(),
   });
 }
 
 function workIndex() {
-  const body = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-16">
+  const body = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-12 sm:px-6 lg:py-16">
     <div class="glow -right-20 -top-24 size-[400px] bg-rose/25"></div>
     <div class="relative max-w-3xl">
       <span class="pill pill-dark">Case studies</span>
@@ -375,7 +378,7 @@ function workIndex() {
     </div>
   </div>
 </section>
-<section class="mx-auto max-w-[1320px] px-3 pt-8 sm:px-6"><div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6">${cases.map(caseCard).join("")}</div></section>
+${light(`<section class="mx-auto max-w-[1320px] px-3 pt-8 sm:px-6"><div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6">${cases.map(caseCard).join("")}</div></section>`)}
 ${ctaBlock()}`;
   return layout({ title: `Case studies | ${FULL}`, desc: "Selected client engagements in e-learning development, LMS implementation and curriculum design.", p: "/work/", body });
 }
@@ -384,8 +387,8 @@ function caseDetail(cs, i) {
   const next = cases[(i + 1) % cases.length];
   const live = slugOk(cs.demoUrl);
   const shots = cs.screenshots.map(webp);
-  const body = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-16">
+  const body = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-12 sm:px-6 lg:py-16">
     <div class="glow -right-24 -top-24 size-[420px] bg-rose/25"></div>
     <div class="relative max-w-4xl">
       <a href="/work/" class="inline-flex items-center gap-2 text-sm font-bold text-cream/70 transition hover:text-rose"><span class="rotate-180">${icon("arrow-right", "size-4")}</span> All case studies</a>
@@ -399,7 +402,7 @@ function caseDetail(cs, i) {
     </div>
   </div>
 </section>
-<section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
+${light(`<section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
   <div class="surface overflow-hidden p-3">${img(shots[0], `${cs.title} screenshot 1`, { eager: true, cls: "w-full rounded-[18px]", sizes: "(min-width:1320px) 1260px, 100vw" })}</div>
 </section>
 <section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
@@ -436,7 +439,7 @@ ${shots.length > 1 ? `<section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
     <div><p class="eyebrow text-rose">Next case study</p><p class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">${esc(next.title)}</p></div>
     ${arrowBtn(true)}
   </a>
-</section>
+</section>`)}
 ${ctaBlock()}`;
   return layout({ title: `${cs.title} | Case study | Manisha Gupta`, desc: cs.summary, p: `/work/${cs.slug}/`, body });
 }
@@ -445,8 +448,8 @@ function coursesPage() {
   const cats = ["Storyline 360", "Rise 360", "Storyboard", "Other Tools"].filter((c) => courses.some((x) => x.category === c));
   const btn = (label, v, on) =>
     `<button type="button" data-filter="${esc(v)}" aria-pressed="${on}" class="rounded-full border px-5 py-2.5 text-sm font-bold transition hover:border-rose hover:text-rose-ink ${on ? "border-transparent bg-rose text-ink" : "border-line bg-white"}">${esc(label)}</button>`;
-  const body = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-16">
+  const body = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-12 sm:px-6 lg:py-16">
     <div class="glow -right-20 -top-24 size-[400px] bg-rose/25"></div>
     <div class="relative max-w-3xl">
       <span class="pill pill-dark">Course library</span>
@@ -455,20 +458,20 @@ function coursesPage() {
     </div>
   </div>
 </section>
-<section class="mx-auto max-w-[1320px] px-3 pt-8 sm:px-6">
+${light(`<section class="mx-auto max-w-[1320px] px-3 pt-8 sm:px-6">
   <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
     <div class="flex flex-wrap gap-2" role="group" aria-label="Filter courses">${btn("All", "all", true)}${cats.map((c) => btn(c, c, false)).join("")}</div>
     <p class="text-sm font-semibold text-ink/60" data-count aria-live="polite">${courses.length} courses</p>
   </div>
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">${courses.map((c) => courseCard(c, false)).join("")}</div>
-</section>
+</section>`)}
 ${ctaBlock()}`;
   return layout({ title: "Courses | Manisha Gupta", desc: "Interactive e-learning courses built in Storyline 360 and Rise 360, with live demos.", p: "/courses/", body });
 }
 
 function resumePage() {
-  const body = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-16">
+  const body = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-12 sm:px-6 lg:py-16">
     <div class="glow -right-20 -top-24 size-[400px] bg-rose/25"></div>
     <div class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
       <div class="max-w-3xl">
@@ -485,7 +488,7 @@ function resumePage() {
     </div>
   </div>
 </section>
-<section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
+${light(`<section class="mx-auto max-w-[1320px] px-3 pt-4 sm:px-6">
   <div class="surface p-7 sm:p-12">
     <h2 class="font-display text-3xl font-extrabold">Summary</h2>
     <p class="mt-4 max-w-3xl text-lg leading-relaxed text-ink/75">${esc(S.summary)}</p>
@@ -512,14 +515,14 @@ function resumePage() {
   <div class="grid gap-4 md:grid-cols-2">
     ${data.skills.map((g) => `<div class="reveal surface p-7"><h3 class="text-xs font-bold uppercase tracking-[0.14em] text-ink/65">${esc(g.group)}</h3><div class="mt-4 flex flex-wrap gap-1.5">${g.items.map((t) => pill(t)).join("")}</div></div>`).join("")}
   </div>
-</section>
+</section>`)}
 ${ctaBlock()}`;
   return layout({ title: "Resume | Manisha Gupta", desc: `Resume of ${S.name}, ${S.title}.`, p: "/resume/", body });
 }
 
 function notFound() {
-  const body = `<section class="px-3 pt-3 sm:px-6">
-  <div class="slab mx-auto max-w-[1320px] px-6 py-24 text-center sm:py-32">
+  const body = `<section class="band band-dark">
+  <div class="mx-auto max-w-[1320px] px-3 py-24 text-center sm:px-6 sm:py-32">
     <div class="glow left-1/2 -top-24 size-[420px] -translate-x-1/2 bg-rose/25"></div>
     <div class="relative">
       <p class="font-display text-[clamp(5rem,16vw,11rem)] font-extrabold leading-none text-rose">404</p>
