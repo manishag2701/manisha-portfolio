@@ -58,25 +58,34 @@
 }
 
 @layer components {
-  /* Full-width bands that stack like layered sheets: each one curves over the one above */
+  /* Full-width bands that stack like layered sheets.
+     Pink sheets sit on top and are rounded on all corners; the black bands sit
+     behind them and show through in the corners. */
   .band {
     position: relative;
     margin-top: calc(var(--curve) * -1);
-    border-radius: var(--curve) var(--curve) 0 0;
-    padding-bottom: var(--curve);
   }
   main > .band:first-child {
     margin-top: 0;
   }
   .band-dark {
+    z-index: 0;
     overflow: hidden;
     background: var(--color-ink);
     color: var(--color-cream);
+    padding-top: var(--curve);
+    padding-bottom: var(--curve);
+  }
+  main > .band-dark:first-child {
+    padding-top: 0;
+    border-radius: var(--curve) var(--curve) 0 0;
   }
   .band-light {
+    z-index: 1;
     background: var(--color-blush);
+    border-radius: var(--curve);
     padding-top: 1.5rem;
-    padding-bottom: calc(var(--curve) + 4rem);
+    padding-bottom: 4rem;
   }
 
   .surface {
