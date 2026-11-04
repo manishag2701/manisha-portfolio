@@ -59,6 +59,7 @@ function img(src, alt, { cls = "", eager = false, sizes = "(min-width:1024px) 50
 const pill = (t, dark = false) => `<span class="pill${dark ? " pill-dark" : ""}">${esc(t)}</span>`;
 const slugOk = (u) => u && u !== "#";
 const mail = `mailto:${S.email}`;
+const mailSubject = `${mail}?subject=${encodeURIComponent("Project enquiry from your portfolio")}`;
 const arrowBtn = (dark) =>
   `<span class="grid size-10 shrink-0 place-items-center rounded-full ${dark ? "bg-rose text-ink" : "bg-ink text-cream"} transition duration-300 group-hover:rotate-45 group-hover:bg-rose group-hover:text-ink">${icon("arrow-up-right", "size-5")}</span>`;
 
@@ -72,6 +73,7 @@ const NAV = [
 ];
 
 function header(p) {
+  const talk = p === "/404" ? "/#contact" : "#contact";
   const links = NAV.map((n) => {
     const active = n.on(p);
     return `<li><a href="${n.href}"${active ? ' aria-current="page"' : ""} class="rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active ? "bg-rose text-ink" : "hover:bg-rose/15"}">${n.label}</a></li>`;
@@ -84,11 +86,11 @@ function header(p) {
     <a href="/" class="font-display text-xl font-extrabold tracking-tight" aria-label="Manisha G., home">Manisha G<span class="text-rose">.</span></a>
     <ul class="hidden items-center gap-1 md:flex">${links}</ul>
     <div class="flex items-center gap-2">
-      <a href="${mail}" class="btn btn-dark hidden !py-2.5 sm:inline-flex">Let's Talk ${icon("arrow-up-right", "size-4")}</a>
+      <a href="${talk}" class="btn btn-dark hidden !py-2.5 sm:inline-flex">Let's Talk ${icon("arrow-up-right", "size-4")}</a>
       <details data-menu class="relative md:hidden">
         <summary class="grid size-11 cursor-pointer place-items-center rounded-full bg-ink text-cream" aria-label="Menu">${icon("menu", "size-5")}</summary>
         <div class="surface absolute right-0 top-[calc(100%+0.75rem)] w-64 p-2 shadow-2xl">${mobile}
-          <a href="${mail}" class="btn btn-rose mt-1 w-full">Let's Talk</a>
+          <a href="${talk}" class="btn btn-rose mt-1 w-full">Let's Talk</a>
         </div>
       </details>
     </div>
@@ -105,11 +107,11 @@ function ctaBlock() {
       <span class="pill pill-dark">Contact</span>
       <h2 class="mt-6 font-display text-[clamp(2.4rem,6vw,4.75rem)] font-extrabold leading-[1.02] text-cream">Let's build the future of learning.</h2>
       <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-cream/70">Have a course, LMS, or instructional design project in mind? I'd love to hear about it.</p>
-      <a href="${mail}" class="btn btn-rose mt-9 max-w-full !px-5 !py-4 !text-sm sm:!px-8 sm:!text-base">${icon("mail", "size-5 shrink-0")} <span class="min-w-0 truncate">${esc(S.email)}</span></a>
+      <a href="${mailSubject}" class="btn btn-rose mt-9 max-w-full !px-5 !py-4 !text-sm sm:!px-8 sm:!text-base">${icon("mail", "size-5 shrink-0")} <span class="min-w-0 truncate">${esc(S.email)}</span></a>
       <ul class="mt-8 flex flex-wrap items-center justify-center gap-3">
         <li><a class="pill pill-dark !px-4 !py-2 text-sm transition hover:border-rose hover:text-rose" href="${S.linkedin}" target="_blank" rel="noopener noreferrer">${icon("linkedin", "size-4")} LinkedIn</a></li>
         <li><a class="pill pill-dark !px-4 !py-2 text-sm transition hover:border-rose hover:text-rose" href="${S.github}" target="_blank" rel="noopener noreferrer">${icon("github", "size-4")} GitHub</a></li>
-        <li><a class="pill pill-dark !px-4 !py-2 text-sm transition hover:border-rose hover:text-rose" href="${mail}">${icon("mail", "size-4")} Email</a></li>
+        <li><button type="button" data-copy="${esc(S.email)}" class="pill pill-dark cursor-pointer !px-4 !py-2 text-sm transition hover:border-rose hover:text-rose">${icon("copy", "size-4")} <span data-copy-label>Copy email</span></button></li>
       </ul>
     </div>
   </div>
@@ -259,10 +261,10 @@ function home() {
               <a href="${c.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-dark shrink-0 !px-4 !py-2.5">Live demo ${icon("arrow-up-right", "size-4")}</a>
             </div>
           </div>`;
-  const stats = [
-    [String(courses.length), "Interactive courses built"],
-    [String(cases.length), "Client case studies"],
-    ["2", "Authoring suites: Storyline 360 and Rise 360"],
+  const strengths = [
+    ["layers", "Custom e-learning", "Storyline 360 and Rise 360 courses"],
+    ["accessibility", "Accessible by design", "Built to WCAG 2.1 and AODA guidance"],
+    ["sparkles", "AI-enhanced content", "Synthesia, HeyGen and NotebookLM"],
   ];
   const hero = `<section class="band band-dark">
   <div class="mx-auto max-w-[1320px]">
@@ -277,8 +279,8 @@ function home() {
         <h1 class="mt-6 font-display text-[clamp(2.6rem,5.2vw,4.9rem)] font-extrabold leading-[1.02] text-cream">Building <span class="rot-word text-rose" data-rotate='${JSON.stringify(data.rotatingWords)}'>${data.rotatingWords[0]}</span> learning experiences.</h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">${esc(S.summary)}</p>
         <div class="mt-9 flex flex-wrap gap-3">
-          <a href="#work" class="btn btn-rose !px-7 !py-3.5">View case studies ${icon("arrow-right", "size-4")}</a>
-          <a href="${mail}" class="btn btn-ghost-dark !px-7 !py-3.5">${icon("mail", "size-4")} Get in touch</a>
+          <a href="/courses/" class="btn btn-rose !px-7 !py-3.5">View courses ${icon("arrow-right", "size-4")}</a>
+          <a href="#contact" class="btn btn-ghost-dark !px-7 !py-3.5">${icon("mail", "size-4")} Get in touch</a>
         </div>
       </div>
       <div class="relative mx-auto w-full max-w-md lg:max-w-none">
@@ -287,12 +289,11 @@ function home() {
           <div class="flex items-center justify-center gap-0.5 pb-1 pt-2" role="group" aria-label="Choose a course preview">${slides.map((c, i) => `<button type="button" data-dot aria-label="Show ${esc(c.title)}" aria-current="${i ? "false" : "true"}" class="group grid size-6 place-items-center rounded-full"><span class="block h-2 rounded-full transition-all duration-300 group-hover:opacity-60 ${i ? "w-2 bg-ink/20" : "w-6 bg-rose"}"></span></button>`).join("")}</div>
         </div>
         <span class="pill pill-rose absolute -top-4 left-6 gap-1.5 !px-3.5 !py-2 text-sm shadow-xl">${icon("check", "size-4")} SCORM ready</span>
-        <span class="pill absolute -bottom-4 right-10 gap-1.5 !bg-white !px-3.5 !py-2 text-sm shadow-xl">${icon("sparkles", "size-4 text-rose-ink")} Live demos</span>
       </div>
     </div>
-    <dl class="relative mx-3 grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 py-7 sm:mx-6 lg:py-9">
-      ${stats.map(([n, l], i) => `<div class="${i ? "pl-4 sm:pl-8" : "pr-4"}"><dt class="font-display text-4xl font-extrabold text-cream sm:text-5xl">${n}</dt><dd class="mt-1 text-xs leading-snug text-cream/60 sm:text-sm">${l}</dd></div>`).join("")}
-    </dl>
+    <ul class="relative mx-3 grid divide-y divide-white/10 border-t border-white/10 sm:mx-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      ${strengths.map(([ic, t, d], i) => `<li class="flex items-start gap-4 py-6 ${i ? "sm:pl-8" : "sm:pr-8"} lg:py-8"><span class="grid size-11 shrink-0 place-items-center rounded-2xl bg-white/[0.07] text-rose">${icon(ic, "size-5")}</span><span><span class="block font-display text-lg font-bold text-cream">${t}</span><span class="mt-0.5 block text-sm leading-snug text-cream/60">${d}</span></span></li>`).join("")}
+    </ul>
   </div>
 </section>`;
 

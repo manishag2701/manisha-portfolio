@@ -131,6 +131,33 @@
     });
   });
 
+  // Copy email (works even when the visitor has no mail app set up)
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    const label = btn.querySelector("[data-copy-label]");
+    const idle = label.textContent;
+    let t;
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy;
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        ok = true;
+      } catch (e) {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { ok = document.execCommand("copy"); } catch (e2) {}
+        ta.remove();
+      }
+      label.textContent = ok ? "Copied!" : text;
+      clearTimeout(t);
+      t = setTimeout(() => { label.textContent = idle; }, 2200);
+    });
+  });
+
   // Mobile menu: close on link click, outside click or Escape
   const menu = document.querySelector("details[data-menu]");
   if (menu) {

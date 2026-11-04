@@ -193,3 +193,10 @@
 
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
+
+/* overflow: clip clips like hidden but is not a scroll container, so focus or anchors can't shift the content */
+@supports (overflow: clip) {
+  .band-dark {
+    overflow: clip;
+  }
+}
