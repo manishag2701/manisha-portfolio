@@ -1,0 +1,705 @@
+{
+  "site": {
+    "name": "Manisha G.",
+    "title": "Instructional Designer & E-Learning Developer",
+    "location": "",
+    "email": "manisha.gupta2706@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/manisha-gupta-725bb730b",
+    "github": "https://github.com/manishag2701",
+    "resumePdf": "/Manisha-Gupta-Resume.pdf",
+    "photo": "/manisha-photo.jpg",
+    "summary": "E-Learning and Instructional Design Specialist with hands-on experience designing interactive learning experiences, implementing LMS platforms, and developing curriculum across education, health, real estate, and technology sectors.",
+    "domain": "manishag.tech",
+    "url": "https://manishag.tech",
+    "description": "Portfolio of Manisha Gupta, an Instructional Designer and E-Learning Developer building curriculum, interactive courses, and LMS implementations across education, health, real estate, and technology."
+  },
+  "caseStudies": [
+    {
+      "id": 1,
+      "slug": "vertical-academy",
+      "title": "Vertical Academy",
+      "client": "Vertical Academy",
+      "category": "E-Learning Course",
+      "role": "Instructional Designer & Curriculum Developer",
+      "period": "2024",
+      "featured": true,
+      "summary": "Curriculum and course design for an online learning academy.",
+      "description": "Designed and developed curriculum and instructional content for Vertical Academy, an online learning platform. The work included needs analysis, learning objective writing, storyboarding, and building interactive course content aligned to learner outcomes.",
+      "impact": "Full curriculum developed end-to-end",
+      "tools": [
+        "Instructional Design",
+        "Curriculum Development",
+        "Storyboarding"
+      ],
+      "highlights": [
+        "Conducted needs analysis to define learning objectives",
+        "Designed and structured course curriculum from the ground up",
+        "Built interactive course content aligned to learner outcomes"
+      ],
+      "tags": [
+        "Curriculum",
+        "Instructional Design",
+        "Online Learning"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/va-1.png",
+        "/projects/va-2.png",
+        "/projects/va-3.png"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "manns-and-associates",
+      "title": "Manns and Associates",
+      "client": "Manns and Associates",
+      "category": "LMS Platform",
+      "role": "LMS Implementation Specialist",
+      "period": "2024",
+      "featured": true,
+      "summary": "Full LMS implementation and course deployment for Manns and Associates.",
+      "description": "Led the implementation of a learning management system for Manns and Associates, enabling the organization to deliver and track training programs at scale. The project included platform configuration, content migration, and training staff on LMS administration.",
+      "impact": "LMS fully operational and deployed",
+      "tools": [
+        "LMS Implementation",
+        "LMS Administration",
+        "E-Learning Deployment"
+      ],
+      "highlights": [
+        "Configured and launched the LMS platform from scratch",
+        "Migrated and organized existing training content into the new system",
+        "Trained staff on LMS administration and reporting"
+      ],
+      "tags": [
+        "LMS",
+        "Implementation",
+        "Training"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/manns-1.png",
+        "/projects/manns-2.png",
+        "/projects/manns-3.png"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "health-and-safety-experts",
+      "title": "Health and Safety Experts",
+      "client": "Health and Safety Experts",
+      "category": "E-Learning Course",
+      "role": "Instructional Designer",
+      "period": "2024",
+      "featured": true,
+      "summary": "Health and safety compliance courses designed for workplace training.",
+      "description": "Designed and developed health and safety e-learning courses for Health and Safety Experts. The courses cover workplace compliance, hazard identification, and safety protocols, using scenario-based learning to engage learners and reinforce real-world application.",
+      "impact": "Compliance training delivered across the organization",
+      "tools": [
+        "Instructional Design",
+        "Compliance Training",
+        "Scenario-Based Learning"
+      ],
+      "highlights": [
+        "Designed scenario-based health and safety courses",
+        "Covered hazard identification, risk assessment, and workplace compliance",
+        "Built training that meets regulatory safety standards"
+      ],
+      "tags": [
+        "Health & Safety",
+        "Compliance",
+        "E-Learning"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/hse-1.png",
+        "/projects/hse-2.png",
+        "/projects/hse-3.png"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "abitare-life",
+      "title": "Abitare Life",
+      "client": "Abitare Life",
+      "category": "E-Learning Course",
+      "role": "Instructional Designer & Curriculum Developer",
+      "period": "2024",
+      "featured": true,
+      "summary": "Lead Care Manager core curriculum developed for Abitare Life's Enhanced Care Management programme.",
+      "description": "Designed and developed the Lead Care Manager (LCM) Core Curriculum for Abitare Life, a care management organisation. The 10-module Rise 360 course covers Enhanced Care Management (ECM), ethics, HIPAA, home visit fundamentals, member engagement, community supports, documentation standards, and scenario-based practice - giving LCMs a structured, compliance-aligned onboarding experience.",
+      "impact": "10-module LCM curriculum built and launched",
+      "tools": [
+        "Articulate Rise 360",
+        "Instructional Design",
+        "Curriculum Development",
+        "Compliance Training"
+      ],
+      "highlights": [
+        "Built 10-module LCM Core Curriculum covering ECM, ethics, HIPAA, and home visits",
+        "Designed scenario-based practice modules for real-world application",
+        "Structured content to meet Medi-Cal compliance and documentation standards"
+      ],
+      "tags": [
+        "Healthcare",
+        "Compliance",
+        "Curriculum",
+        "Rise 360"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/abitare-1.png",
+        "/projects/abitare-2.png",
+        "/projects/abitare-3.png"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "realtors-one-voice-one-vote",
+      "title": "Realtors One Voice One Vote",
+      "client": "Realtors One Voice One Vote",
+      "category": "Instructional Design",
+      "role": "Instructional Designer & Curriculum Developer",
+      "period": "2024",
+      "featured": true,
+      "summary": "Educational content and training program for a real estate advocacy initiative.",
+      "description": "Created educational content and training materials for Realtors One Voice One Vote, an advocacy initiative within the real estate sector. The work involved designing a curriculum that educates realtors on civic engagement, voting rights, and advocacy strategies, making the content both informative and motivating.",
+      "impact": "Training program launched for realtor community",
+      "tools": [
+        "Instructional Design",
+        "Curriculum Development",
+        "Advocacy Training"
+      ],
+      "highlights": [
+        "Designed educational content focused on civic engagement and advocacy",
+        "Built training materials tailored to the realtor community",
+        "Created motivating, action-oriented learning experiences"
+      ],
+      "tags": [
+        "Real Estate",
+        "Advocacy",
+        "Training"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/realtors-1.png",
+        "/projects/realtors-2.png",
+        "/projects/realtors-3.png"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "deel-engage",
+      "title": "Deel Engage",
+      "client": "Deel Engage",
+      "category": "E-Learning Course",
+      "role": "Instructional Designer",
+      "period": "2024",
+      "featured": true,
+      "summary": "Microlearning modules built inside Deel Engage to train people leaders on performance review workflows.",
+      "description": "Designed and developed microlearning content within Deel Engage - a global HR and performance management platform - to help people leaders navigate performance review cycles. The modules cover team views, extended view options, review cycles, and goal-setting workflows, making complex platform features accessible and easy to apply on the job.",
+      "impact": "Microlearning suite delivered for people leaders globally",
+      "tools": [
+        "Articulate Rise 360",
+        "Microlearning Design",
+        "Instructional Design",
+        "Deel Engage"
+      ],
+      "highlights": [
+        "Developed microlearning modules for Deel Engage's performance review module",
+        "Covered team view, extended view, and review cycle navigation",
+        "Designed concise, action-oriented content for global people leaders"
+      ],
+      "tags": [
+        "HR Tech",
+        "Microlearning",
+        "Performance Management",
+        "Deel"
+      ],
+      "demoUrl": "#",
+      "screenshots": [
+        "/projects/deel-1.png",
+        "/projects/deel-2.png",
+        "/projects/deel-3.png"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "slug": "cybersecurity-awareness",
+      "title": "Cybersecurity Awareness Training",
+      "category": "Storyline 360",
+      "blurb": "Interactive course covering phishing recognition, social engineering, strong passwords & MFA, safe data handling, incident reporting, and remote security best practices.",
+      "images": [
+        "/work/cybersecurity-awareness.png"
+      ],
+      "video": "/videos/cybersec.mp4",
+      "tools": [
+        "Articulate Storyline 360",
+        "SCORM",
+        "Scenario-Based"
+      ],
+      "featured": true,
+      "demoUrl": "https://elearnify360-cybersecurity-awareness.netlify.app/"
+    },
+    {
+      "slug": "ai-fundamentals",
+      "title": "AI Fundamentals",
+      "category": "Storyline 360",
+      "blurb": "A short introductory lesson on AI concepts, featuring Synthesia AI avatar videos and cinematic visuals created with NotebookLM - all assembled in Articulate Storyline.",
+      "images": [
+        "/work/ai-fundamentals.png"
+      ],
+      "video": "/videos/ai-course.mp4",
+      "tools": [
+        "Articulate Storyline 360",
+        "Synthesia AI",
+        "NotebookLM"
+      ],
+      "featured": true,
+      "demoUrl": "https://elearnify360-ai-fundamentals.netlify.app/"
+    },
+    {
+      "slug": "office-ergonomics",
+      "title": "Office Ergonomics 360° Scenario",
+      "category": "Storyline 360",
+      "blurb": "Immersive 360° office environment where learners identify ergonomic hazards, adjust workstation setups, and make safety decisions through interactive hotspots.",
+      "images": [
+        "/work/office-ergonomics.png"
+      ],
+      "video": "/videos/office-ergonomics.mp4",
+      "tools": [
+        "Articulate Storyline 360",
+        "SCORM",
+        "360° Hotspots"
+      ],
+      "demoUrl": "https://elearnify360-office-ergonomics.netlify.app/"
+    },
+    {
+      "slug": "fall-protection",
+      "title": "Fall Protection",
+      "category": "Storyline 360",
+      "blurb": "A course on working at height safety, covering fall hazards, proper use of fall protection equipment, and safe practices to prevent incidents on the job.",
+      "images": [
+        "/work/fall-protection.png"
+      ],
+      "video": "/videos/rise360.mp4",
+      "tools": [
+        "Articulate Storyline 360",
+        "SCORM",
+        "Animated Slides"
+      ],
+      "demoUrl": "https://elearnify360-fall-protection-module.netlify.app/"
+    },
+    {
+      "slug": "quick-tips-excel",
+      "title": "Quick Excel Tips for Better Productivity",
+      "category": "Storyline 360",
+      "blurb": "Software simulation course featuring quick productivity tips for Excel - Try/Show modes, screen-capture walkthroughs, and auto-hints across 75 slides.",
+      "images": [
+        "/work/quick-tips-excel.png",
+        "/work/quick-tips-excel-2.png"
+      ],
+      "tools": [
+        "Articulate Storyline 360",
+        "Software Simulation",
+        "SCORM"
+      ],
+      "demoUrl": "https://elearnify360-quick-excel-tips.netlify.app/"
+    },
+    {
+      "slug": "dental-implant-procedure",
+      "title": "Dental Implant Procedure",
+      "category": "Storyline 360",
+      "blurb": "An interactive video course on the dental implant procedure. The video pauses at key moments to present questions - answer and continue to build understanding step by step.",
+      "images": [
+        "/work/dental-implant-procedure.png"
+      ],
+      "tools": [
+        "Articulate Storyline 360",
+        "Interactive Video",
+        "SCORM"
+      ],
+      "demoUrl": "https://elearnify360-dental-implant-procedure.netlify.app/"
+    },
+    {
+      "slug": "brewing-the-perfect-cup",
+      "title": "Brewing the Perfect Cup",
+      "category": "Storyline 360",
+      "blurb": "A visually polished glassmorphism-styled microlearning sample on brewing a perfect pour-over - ratio, temperature, pour technique, and timing.",
+      "images": [
+        "/work/brewing-the-perfect-cup.png"
+      ],
+      "video": "/videos/brewing.mp4",
+      "tools": [
+        "Articulate Storyline 360",
+        "SCORM",
+        "Glassmorphism UI"
+      ],
+      "demoUrl": "https://elearnify360-brewing-perfect-cup.netlify.app/"
+    },
+    {
+      "slug": "effective-communication-skills",
+      "title": "Effective Communication Skills",
+      "category": "Rise 360",
+      "blurb": "A course on effective communication in the workplace, with real-world scenarios to practise active listening, clarity, and confident messaging.",
+      "images": [
+        "/work/effective-communication-skills.png"
+      ],
+      "video": "/videos/communication.mp4",
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM",
+        "Scenario-Based"
+      ],
+      "featured": true,
+      "demoUrl": "https://elearnify360-effective-communication.netlify.app/"
+    },
+    {
+      "slug": "intro-to-cryptocurrency",
+      "title": "Introduction to Cryptocurrency",
+      "category": "Rise 360",
+      "blurb": "Beginner-friendly course covering blockchain fundamentals, how digital currencies work, key crypto assets, and real-world applications in today's financial landscape.",
+      "images": [
+        "/work/intro-to-cryptocurrency.png"
+      ],
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM",
+        "Vector Illustrations"
+      ],
+      "featured": true,
+      "demoUrl": "https://elearnify360-intro-to-cryptocurrency.netlify.app/"
+    },
+    {
+      "slug": "how-to-spot-phishing",
+      "title": "How to Spot Phishing Email in 3 Minutes",
+      "category": "Rise 360",
+      "blurb": "Bite-sized microlearning course that teaches employees how to recognise phishing emails, suspicious links, and social engineering tactics before they cause harm.",
+      "images": [
+        "/work/how-to-spot-phising.png"
+      ],
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM",
+        "Microlearning"
+      ],
+      "demoUrl": "https://elearnify360-how-to-spot-phishing.netlify.app/"
+    },
+    {
+      "slug": "foundations-of-healthy-living",
+      "title": "Foundations of Healthy Living",
+      "category": "Rise 360",
+      "blurb": "A practical course covering nutrition, physical activity, sleep, and mental wellbeing - helping learners build simple, sustainable habits for a healthier life.",
+      "images": [
+        "/work/healthy-living-2.png",
+        "/work/healthy-living.png"
+      ],
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM"
+      ],
+      "demoUrl": "https://elearnify360-healthy-living.netlify.app/"
+    },
+    {
+      "slug": "intro-to-strategic-management",
+      "title": "Introduction to Strategic Management",
+      "category": "Rise 360",
+      "blurb": "A clean Rise 360 course on strategic management fundamentals - setting direction, competitive analysis, and organisational alignment.",
+      "images": [
+        "/work/intro-to-strategic-management-2.png",
+        "/work/intro-to-strategic-management.png"
+      ],
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM"
+      ],
+      "demoUrl": "https://elearnify360-strategic-management.netlify.app/"
+    },
+    {
+      "slug": "data-privacy-and-protection",
+      "title": "Data Privacy & Protection",
+      "category": "Rise 360",
+      "blurb": "Core data privacy principles, employee responsibilities, and best practices for handling personal data securely and in line with GDPR/PIPEDA regulations.",
+      "images": [
+        "/work/data-privacy-and-protection.png"
+      ],
+      "tools": [
+        "Articulate Rise 360",
+        "SCORM",
+        "GDPR Aligned"
+      ],
+      "demoUrl": "https://elearnify360-data-privacy-protection.netlify.app/"
+    },
+    {
+      "slug": "pipeda-privacy-fundamentals",
+      "title": "PIPEDA Privacy Fundamentals",
+      "category": "Storyboard",
+      "blurb": "A screen-by-screen storyboard for a Rise 360 course on PIPEDA privacy principles, covering employee responsibilities, data handling, and compliance requirements.",
+      "images": [
+        "/work/PIPEDA-and-privacy-fundamentals.png"
+      ],
+      "tools": [
+        "Rise 360 Storyboard",
+        "PIPEDA Compliance"
+      ],
+      "hidden": true,
+      "demoUrl": "https://drive.google.com/file/d/1BZy5GOVbgVUsstapd0LFwM5PZdO8SBTI/view?usp=sharing"
+    },
+    {
+      "slug": "chemical-safety-storyboard",
+      "title": "Chemical Safety in the Workplace",
+      "category": "Storyboard",
+      "blurb": "A screen-by-screen build plan for a GHS hazard communication module in Articulate Storyline - covering text, narration, visuals, and interactions.",
+      "images": [
+        "/work/chemical-safety-in-workplace.png"
+      ],
+      "tools": [
+        "Storyline 360 Storyboard",
+        "GHS Labeling"
+      ],
+      "demoUrl": "https://drive.google.com/file/d/1UaJ0v6V6A6YTp1UsWjGxWMVenHoYzuAH/view?usp=sharing"
+    },
+    {
+      "slug": "sales-ai-system",
+      "title": "Sales AI System",
+      "category": "Other Tools",
+      "blurb": "An AI sales coach built with Synthesia - teaches simple, practical ways to guide conversations, build trust, and turn prospects into customers.",
+      "images": [
+        "/work/sales-ai-system.png"
+      ],
+      "tools": [
+        "Synthesia",
+        "AI Avatar",
+        "Video Editing"
+      ],
+      "demoUrl": "https://share.synthesia.io/9a49b2d7-95b5-4f93-82db-5dc74786a5ee"
+    },
+    {
+      "slug": "employee-onboarding",
+      "title": "New Employee Onboarding",
+      "category": "Other Tools",
+      "blurb": "New employee onboarding course featuring a variety of activities, web simulations, and assessments - packaged in SCORM 1.2, SCORM 2004, and HTML5.",
+      "images": [
+        "/work/employee-onboarding.png"
+      ],
+      "tools": [
+        "ScormStack",
+        "SCORM 1.2",
+        "SCORM 2004"
+      ],
+      "featured": true,
+      "demoUrl": "https://elearnify360-employee-onboarding.netlify.app/"
+    },
+    {
+      "slug": "fire-safety",
+      "title": "Fire Safety",
+      "category": "Other Tools",
+      "blurb": "Course covering fire safety rules and emergency behaviour - with quizzes, drag-and-drop activities, and branching scenarios to prepare employees for real situations.",
+      "images": [
+        "/work/fire-safety.png"
+      ],
+      "tools": [
+        "SCORM",
+        "xAPI"
+      ],
+      "hidden": true,
+      "demoUrl": "https://elearnify360-fire-safety.netlify.app/"
+    },
+    {
+      "slug": "ethics-and-code-of-conduct",
+      "title": "Ethics & Code of Conduct",
+      "category": "Other Tools",
+      "blurb": "A quick, visually polished course built in Canva covering workplace ethics, expected behaviours, and code of conduct essentials for employees.",
+      "images": [
+        "/work/ethics-and-code-of-conduct.png"
+      ],
+      "tools": [
+        "Canva",
+        "PDF",
+        "Web"
+      ],
+      "demoUrl": "https://canva.link/t9foj2wauuumqme"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Instructional Designer & E-Learning Developer",
+      "company": "eLearnify360",
+      "location": "",
+      "period": "2024 - Present",
+      "bullets": [
+        "Designed and developed interactive e-learning courses and instructional content for clients across multiple sectors.",
+        "Conducted needs analysis, wrote learning objectives, and built storyboards to guide course development.",
+        "Delivered accessible, engaging learning experiences aligned to measurable learner outcomes."
+      ]
+    },
+    {
+      "role": "Instructional Designer",
+      "company": "Health and Safety Experts",
+      "location": "",
+      "period": "2024",
+      "bullets": [
+        "Designed health and safety compliance courses using scenario-based learning to engage workplace learners.",
+        "Covered hazard identification, risk assessment, and workplace safety protocols.",
+        "Built training materials that meet regulatory safety standards."
+      ]
+    },
+    {
+      "role": "Curriculum Developer & Instructional Designer",
+      "company": "Vertical Academy",
+      "location": "",
+      "period": "2024",
+      "bullets": [
+        "Developed full curriculum and course content for an online learning academy from the ground up.",
+        "Designed learning pathways and structured course modules aligned to learner outcomes.",
+        "Translated subject matter expertise into clear, engaging instructional content."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "E-Learning Tools & Standards",
+      "items": [
+        "Articulate Storyline 360",
+        "Articulate Rise 360",
+        "iSpring Suite",
+        "SCORM 1.2 / 2004",
+        "xAPI",
+        "Camtasia",
+        "Synthesia",
+        "HeyGen"
+      ]
+    },
+    {
+      "group": "Instructional Design",
+      "items": [
+        "Needs Analysis",
+        "Storyboarding",
+        "Curriculum Development",
+        "Learning Objective Writing",
+        "Adult Learning Principles",
+        "WCAG 2.1 / AODA"
+      ]
+    },
+    {
+      "group": "LMS Platforms & Administration",
+      "items": [
+        "LMS Integration",
+        "LTI",
+        "LearnWorlds",
+        "Moodle",
+        "TalentLMS",
+        "LearnDash",
+        "Litmos LMS",
+        "Thinkific",
+        "Docebo",
+        "Learning Analytics"
+      ]
+    },
+    {
+      "group": "Web & Software",
+      "items": [
+        "HTML / CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Payload CMS",
+        "REST APIs",
+        "Azure"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "name": "Manns & Associates",
+      "logo": "/logos/logo-manns.png",
+      "h": 32
+    },
+    {
+      "name": "Health & Safety Experts",
+      "logo": "/logos/logo-hse.png",
+      "h": 32
+    },
+    {
+      "name": "Abitare",
+      "logo": "/logos/logo-abitare.png",
+      "h": 54
+    },
+    {
+      "name": "Deel",
+      "logo": "/logos/logo-deel-transparent.png",
+      "h": 30
+    }
+  ],
+  "rotatingWords": [
+    "intelligent",
+    "engaging",
+    "impactful",
+    "innovative"
+  ],
+  "services": [
+    {
+      "icon": "layers",
+      "title": "Custom E-Learning Development",
+      "text": "Interactive courses built in Articulate Storyline 360 and Rise 360, packaged as SCORM 1.2, SCORM 2004 or xAPI and ready for any LMS.",
+      "tags": [
+        "Storyline 360",
+        "Rise 360",
+        "SCORM"
+      ]
+    },
+    {
+      "icon": "pencil-ruler",
+      "title": "Instructional & Curriculum Design",
+      "text": "Needs analysis, measurable learning objectives, storyboards and full learning pathways built around how adults actually learn.",
+      "tags": [
+        "Needs analysis",
+        "Storyboarding",
+        "Curriculum"
+      ]
+    },
+    {
+      "icon": "server",
+      "title": "LMS Implementation",
+      "text": "Set up, configure and launch your learning platform, then load and test courses so training is live and tracked from day one.",
+      "tags": [
+        "LearnWorlds",
+        "Moodle",
+        "TalentLMS"
+      ]
+    },
+    {
+      "icon": "sparkles",
+      "title": "AI-Powered Learning Content",
+      "text": "AI avatars, narrated video and cinematic visuals that make training feel modern, built with Synthesia, HeyGen and NotebookLM.",
+      "tags": [
+        "Synthesia",
+        "HeyGen",
+        "NotebookLM"
+      ]
+    },
+    {
+      "icon": "shield-check",
+      "title": "Compliance & Safety Training",
+      "text": "Scenario-based courses for health and safety, privacy and workplace compliance, aligned to regulations like PIPEDA and GDPR.",
+      "tags": [
+        "Health & safety",
+        "Privacy",
+        "Compliance"
+      ]
+    },
+    {
+      "icon": "accessibility",
+      "title": "Accessible Learning Design",
+      "text": "Courses designed to WCAG 2.1 and AODA guidance so every learner can take part, on any device.",
+      "tags": [
+        "WCAG 2.1",
+        "AODA",
+        "Responsive"
+      ]
+    }
+  ]
+}
