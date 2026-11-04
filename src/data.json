@@ -232,14 +232,14 @@
       "images": [
         "/work/cybersecurity-awareness.png"
       ],
-      "video": "/videos/cybersec.mp4",
       "tools": [
         "Articulate Storyline 360",
         "SCORM",
         "Scenario-Based"
       ],
       "featured": true,
-      "demoUrl": "https://elearnify360-cybersecurity-awareness.netlify.app/"
+      "demoUrl": "https://elearnify360-cybersecurity-awareness.netlify.app/",
+      "preview": "/videos/previews/cybersecurity-awareness.mp4"
     },
     {
       "slug": "ai-fundamentals",
@@ -249,30 +249,30 @@
       "images": [
         "/work/ai-fundamentals.png"
       ],
-      "video": "/videos/ai-course.mp4",
       "tools": [
         "Articulate Storyline 360",
         "Synthesia AI",
         "NotebookLM"
       ],
       "featured": true,
-      "demoUrl": "https://elearnify360-ai-fundamentals.netlify.app/"
+      "demoUrl": "https://elearnify360-ai-fundamentals.netlify.app/",
+      "preview": "/videos/previews/ai-fundamentals.mp4"
     },
     {
       "slug": "office-ergonomics",
-      "title": "Office Ergonomics 360° Scenario",
+      "title": "Office Ergonomics 360\u00b0 Scenario",
       "category": "Storyline 360",
-      "blurb": "Immersive 360° office environment where learners identify ergonomic hazards, adjust workstation setups, and make safety decisions through interactive hotspots.",
+      "blurb": "Immersive 360\u00b0 office environment where learners identify ergonomic hazards, adjust workstation setups, and make safety decisions through interactive hotspots.",
       "images": [
         "/work/office-ergonomics.png"
       ],
-      "video": "/videos/office-ergonomics.mp4",
       "tools": [
         "Articulate Storyline 360",
         "SCORM",
-        "360° Hotspots"
+        "360\u00b0 Hotspots"
       ],
-      "demoUrl": "https://elearnify360-office-ergonomics.netlify.app/"
+      "demoUrl": "https://elearnify360-office-ergonomics.netlify.app/",
+      "preview": "/videos/previews/office-ergonomics.mp4"
     },
     {
       "slug": "fall-protection",
@@ -282,7 +282,6 @@
       "images": [
         "/work/fall-protection.png"
       ],
-      "video": "/videos/rise360.mp4",
       "tools": [
         "Articulate Storyline 360",
         "SCORM",
@@ -329,13 +328,13 @@
       "images": [
         "/work/brewing-the-perfect-cup.png"
       ],
-      "video": "/videos/brewing.mp4",
       "tools": [
         "Articulate Storyline 360",
         "SCORM",
         "Glassmorphism UI"
       ],
-      "demoUrl": "https://elearnify360-brewing-perfect-cup.netlify.app/"
+      "demoUrl": "https://elearnify360-brewing-perfect-cup.netlify.app/",
+      "preview": "/videos/previews/brewing-the-perfect-cup.mp4"
     },
     {
       "slug": "effective-communication-skills",
@@ -345,14 +344,14 @@
       "images": [
         "/work/effective-communication-skills.png"
       ],
-      "video": "/videos/communication.mp4",
       "tools": [
         "Articulate Rise 360",
         "SCORM",
         "Scenario-Based"
       ],
       "featured": true,
-      "demoUrl": "https://elearnify360-effective-communication.netlify.app/"
+      "demoUrl": "https://elearnify360-effective-communication.netlify.app/",
+      "preview": "/videos/previews/effective-communication-skills.mp4"
     },
     {
       "slug": "intro-to-cryptocurrency",
@@ -368,7 +367,8 @@
         "Vector Illustrations"
       ],
       "featured": true,
-      "demoUrl": "https://elearnify360-intro-to-cryptocurrency.netlify.app/"
+      "demoUrl": "https://elearnify360-intro-to-cryptocurrency.netlify.app/",
+      "preview": "/videos/previews/intro-to-cryptocurrency.mp4"
     },
     {
       "slug": "how-to-spot-phishing",
@@ -526,7 +526,7 @@
       "role": "Instructional Designer & E-Learning Developer",
       "company": "eLearnify360",
       "location": "",
-      "period": "2024 - Present",
+      "period": "2024 - September 2026",
       "bullets": [
         "Designed and developed interactive e-learning courses and instructional content for clients across multiple sectors.",
         "Conducted needs analysis, wrote learning objectives, and built storyboards to guide course development.",

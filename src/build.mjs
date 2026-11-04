@@ -63,7 +63,7 @@ const arrowBtn = (dark) =>
 
 /* ---------- layout ---------- */
 const NAV = [
-  { label: "Work", href: "/#work", on: (p) => p.startsWith("/work") },
+  { label: "Case Studies", href: "/#work", on: (p) => p.startsWith("/work") },
   { label: "Courses", href: "/courses/", on: (p) => p.startsWith("/courses") },
   { label: "Services", href: "/#services", on: () => false },
   { label: "About", href: "/#about", on: () => false },
@@ -119,7 +119,7 @@ function footer() {
   return `<footer class="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-ink/65 sm:flex-row">
   <p>&copy; ${YEAR} ${esc(S.name)} &middot; ${esc(S.title)}</p>
   <ul class="flex gap-5 font-semibold">
-    <li><a class="hover:text-rose-ink" href="/work/">Work</a></li>
+    <li><a class="hover:text-rose-ink" href="/work/">Case studies</a></li>
     <li><a class="hover:text-rose-ink" href="/courses/">Courses</a></li>
     <li><a class="hover:text-rose-ink" href="/resume/">Resume</a></li>
   </ul>
@@ -211,11 +211,11 @@ function caseCard(cs, i) {
 
 function courseCard(c, dark) {
   const src = webp(c.images[0]);
-  return `<article data-category="${esc(c.category)}"${c.video ? " data-video" : ""} class="reveal group overflow-hidden transition duration-300 hover:-translate-y-1 ${dark ? "surface-dark hover:border-rose/60" : "surface hover:border-rose hover:shadow-[0_24px_60px_-28px_rgba(255,75,114,0.5)]"}">
+  return `<article data-category="${esc(c.category)}"${c.preview ? " data-video" : ""} class="reveal group overflow-hidden transition duration-300 hover:-translate-y-1 ${dark ? "surface-dark hover:border-rose/60" : "surface hover:border-rose hover:shadow-[0_24px_60px_-28px_rgba(255,75,114,0.5)]"}">
   <a href="${c.demoUrl}" target="_blank" rel="noopener noreferrer" class="flex h-full flex-col" aria-label="${esc(c.title)}: view demo (opens in a new tab)">
     <div class="relative aspect-[16/10] overflow-hidden bg-ink">
       ${img(src, `${c.title} course preview`, { cls: "h-full w-full object-cover object-top transition duration-700 group-hover:scale-105", sizes: "(min-width:1024px) 30vw, (min-width:640px) 45vw, 100vw" })}
-      ${c.video ? `<video data-src="${c.video}" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` : ""}
+      ${c.preview ? `<video data-src="${c.preview}" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` : ""}
       <span class="pill pill-rose absolute left-3 top-3">${esc(c.category)}</span>
     </div>
     <div class="flex flex-1 flex-col p-5 sm:p-6">
@@ -245,7 +245,17 @@ function clientsStrip() {
 }
 
 function home() {
-  const brew = courses.find((c) => c.slug === "brewing-the-perfect-cup");
+  const SHOWCASE = ["brewing-the-perfect-cup", "cybersecurity-awareness", "effective-communication-skills", "office-ergonomics", "ai-fundamentals"];
+  const slides = SHOWCASE.map((slug) => courses.find((c) => c.slug === slug));
+  const slide = (c, i) => `<div data-slide class="transition-opacity duration-500 [grid-area:1/1]" ${i ? 'hidden aria-hidden="true" inert' : ""}>
+            <div class="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-ink">
+              <video ${i ? `data-src="${c.preview}"` : `data-autoplay autoplay src="${c.preview}"`} muted loop playsinline preload="${i ? "none" : "metadata"}" poster="${webp(c.images[0])}" class="h-full w-full object-cover" aria-label="Preview of the ${esc(c.title)} course"></video>
+            </div>
+            <div class="flex items-center justify-between gap-3 px-2 pb-1 pt-4">
+              <div class="min-w-0">${pill(c.category)}<p class="mt-2 truncate font-display text-lg font-bold">${esc(c.title)}</p></div>
+              <a href="${c.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-dark shrink-0 !px-4 !py-2.5">Live demo ${icon("arrow-up-right", "size-4")}</a>
+            </div>
+          </div>`;
   const stats = [
     [String(courses.length), "Interactive courses built"],
     [String(cases.length), "Client case studies"],
@@ -264,22 +274,17 @@ function home() {
         <h1 class="mt-6 font-display text-[clamp(2.6rem,5.2vw,4.9rem)] font-extrabold leading-[1.02] text-cream">Building <span class="rot-word text-rose" data-rotate='${JSON.stringify(data.rotatingWords)}'>${data.rotatingWords[0]}</span> learning experiences.</h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">${esc(S.summary)}</p>
         <div class="mt-9 flex flex-wrap gap-3">
-          <a href="#work" class="btn btn-rose !px-7 !py-3.5">View my work ${icon("arrow-right", "size-4")}</a>
+          <a href="#work" class="btn btn-rose !px-7 !py-3.5">View case studies ${icon("arrow-right", "size-4")}</a>
           <a href="${mail}" class="btn btn-ghost-dark !px-7 !py-3.5">${icon("mail", "size-4")} Get in touch</a>
         </div>
       </div>
       <div class="relative mx-auto w-full max-w-md lg:max-w-none">
-        <div class="rounded-[28px] bg-white p-3 text-ink shadow-[0_40px_90px_-30px_rgba(255,75,114,0.45)] ring-1 ring-white/10">
-          <div class="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-ink">
-            <video data-autoplay autoplay muted loop playsinline preload="metadata" poster="${webp(brew.images[0])}" class="h-full w-full object-cover" aria-label="Preview of the ${esc(brew.title)} course"><source src="${brew.video}" type="video/mp4"></video>
-          </div>
-          <div class="flex items-center justify-between gap-3 px-2 pb-1 pt-4">
-            <div class="min-w-0">${pill(brew.category)}<p class="mt-2 truncate font-display text-lg font-bold">${esc(brew.title)}</p></div>
-            <a href="${brew.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-dark shrink-0 !px-4 !py-2.5">Live demo ${icon("arrow-up-right", "size-4")}</a>
-          </div>
+        <div data-carousel role="group" aria-roledescription="carousel" aria-label="Featured course previews" class="rounded-[28px] bg-white p-3 text-ink shadow-[0_40px_90px_-30px_rgba(255,75,114,0.45)] ring-1 ring-white/10">
+          <div class="grid">${slides.map(slide).join("")}</div>
+          <div class="flex items-center justify-center gap-0.5 pb-1 pt-2" role="group" aria-label="Choose a course preview">${slides.map((c, i) => `<button type="button" data-dot aria-label="Show ${esc(c.title)}" aria-current="${i ? "false" : "true"}" class="group grid size-6 place-items-center rounded-full"><span class="block h-2 rounded-full transition-all duration-300 group-hover:opacity-60 ${i ? "w-2 bg-ink/20" : "w-6 bg-rose"}"></span></button>`).join("")}</div>
         </div>
         <span class="pill pill-rose absolute -top-4 left-6 gap-1.5 !px-3.5 !py-2 text-sm shadow-xl">${icon("check", "size-4")} SCORM ready</span>
-        <span class="pill absolute -right-1 bottom-24 gap-1.5 !bg-white !px-3.5 !py-2 text-sm shadow-xl sm:-right-5">${icon("sparkles", "size-4 text-rose-ink")} Live demos</span>
+        <span class="pill absolute -bottom-4 right-10 gap-1.5 !bg-white !px-3.5 !py-2 text-sm shadow-xl">${icon("sparkles", "size-4 text-rose-ink")} Live demos</span>
       </div>
     </div>
     <dl class="relative grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 px-6 py-7 sm:px-10 lg:px-16 lg:py-9">
@@ -289,11 +294,11 @@ function home() {
 </section>`;
 
   const work = `<section id="work" class="mx-auto max-w-[1320px] px-3 pt-24 sm:px-6">
-  ${sectionHead({ eyebrow: "Selected work", title: "Selected engagements", text: "Client work across education, health, real estate and technology.", linkHref: "/work/", linkLabel: "All case studies" })}
+  ${sectionHead({ eyebrow: "Case studies", title: "Selected engagements", text: "Client work across education, health, real estate and technology.", linkHref: "/work/", linkLabel: "All case studies" })}
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-6">${cases.map(caseCard).join("")}</div>
 </section>`;
 
-  const featured = [...courses.filter((c) => c.featured), ...courses.filter((c) => !c.featured && c.video)].slice(0, 6);
+  const featured = [...courses.filter((c) => c.featured), ...courses.filter((c) => !c.featured && c.preview)].slice(0, 6);
   const coursesSec = `<section id="courses" class="px-3 pt-24 sm:px-6">
   <div class="slab mx-auto max-w-[1320px] p-6 sm:p-10 lg:p-14">
     <div class="glow -right-20 -top-20 size-[360px] bg-rose/20"></div>
@@ -320,21 +325,18 @@ function home() {
   </div>
 </section>`;
 
-  const current = data.experience[0];
+  const coreSkills = ["Articulate Storyline 360", "Articulate Rise 360", "SCORM 1.2 / 2004", "xAPI", "LMS Integration", "Storyboarding", "Synthesia", "WCAG 2.1 / AODA"];
   const about = `<section id="about" class="mx-auto max-w-[1320px] px-3 pt-24 sm:px-6">
-  <div class="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
+  <div class="grid gap-4 lg:grid-cols-[0.6fr_1.4fr]">
     <div class="reveal surface flex overflow-hidden p-3">
-      ${img("/img/photo.webp", "Portrait of Manisha Gupta", { cls: "aspect-[4/5] w-full rounded-[18px] object-cover object-top lg:aspect-auto lg:h-full lg:min-h-[480px]", sizes: "(min-width:1024px) 35vw, 100vw" })}
+      ${img("/img/photo.webp", "Portrait of Manisha Gupta", { cls: "aspect-[4/5] w-full rounded-[18px] object-cover object-top lg:aspect-auto lg:h-full", sizes: "(min-width:1024px) 30vw, 100vw" })}
     </div>
-    <div class="reveal surface p-7 sm:p-12">
+    <div class="reveal surface flex flex-col justify-center p-7 sm:p-12">
       <span class="eyebrow text-rose-ink"><span class="size-1.5 rounded-full bg-rose"></span>About</span>
       <h2 class="mt-3 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl">Hi, I'm Manisha.</h2>
-      <p class="mt-5 text-lg leading-relaxed text-ink/75">${esc(S.summary)}</p>
-      <p class="mt-4 leading-relaxed text-ink/70">Currently ${esc(current.role)} at ${esc(current.company)}, creating interactive courses for clients across multiple sectors.</p>
-      <dl class="mt-8 grid gap-6 sm:grid-cols-2">
-        ${data.skills.map((g) => `<div><dt class="text-xs font-bold uppercase tracking-[0.14em] text-ink/65">${esc(g.group)}</dt><dd class="mt-3 flex flex-wrap gap-1.5">${g.items.slice(0, 7).map((t) => pill(t)).join("")}</dd></div>`).join("")}
-      </dl>
-      <div class="mt-9 flex flex-wrap gap-3">
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink/75">${esc(S.summary)}</p>
+      <ul class="mt-7 flex flex-wrap gap-1.5" aria-label="Core skills">${coreSkills.map((t) => `<li>${pill(t)}</li>`).join("")}</ul>
+      <div class="mt-8 flex flex-wrap gap-3">
         <a href="/resume/" class="btn btn-dark">View resume ${icon("arrow-right", "size-4")}</a>
         <a href="${S.linkedin}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">${icon("linkedin", "size-4")} LinkedIn</a>
       </div>

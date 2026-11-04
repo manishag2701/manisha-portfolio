@@ -36,11 +36,57 @@
     }, 2600);
   }
 
-  // Hero preview video: stay still for reduced-motion users
-  document.querySelectorAll("video[data-autoplay]").forEach((v) => {
-    if (reduceMotion) v.removeAttribute("autoplay");
-    else v.play().catch(() => {});
-  });
+  // Hero showcase: rotating course previews
+  const car = document.querySelector("[data-carousel]");
+  if (car) {
+    const slides = [...car.querySelectorAll("[data-slide]")];
+    const dots = [...car.querySelectorAll("[data-dot]")];
+    let cur = 0;
+    let timer = null;
+    const show = (n) => {
+      cur = n;
+      slides.forEach((s, k) => {
+        const on = k === n;
+        s.hidden = false;
+        s.classList.toggle("opacity-0", !on);
+        s.classList.toggle("pointer-events-none", !on);
+        s.toggleAttribute("inert", !on);
+        s.setAttribute("aria-hidden", String(!on));
+        const v = s.querySelector("video");
+        if (!v) return;
+        if (on) {
+          if (!v.getAttribute("src") && v.dataset.src) v.src = v.dataset.src;
+          if (!reduceMotion) v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      });
+      dots.forEach((d, k) => {
+        const on = k === n;
+        d.setAttribute("aria-current", String(on));
+        const bar = d.firstElementChild;
+        bar.classList.toggle("w-6", on);
+        bar.classList.toggle("bg-rose", on);
+        bar.classList.toggle("w-2", !on);
+        bar.classList.toggle("bg-ink/20", !on);
+      });
+    };
+    const start = () => {
+      if (reduceMotion || timer) return;
+      timer = setInterval(() => show((cur + 1) % slides.length), 5500);
+    };
+    const stop = () => {
+      clearInterval(timer);
+      timer = null;
+    };
+    show(0);
+    dots.forEach((d, k) => d.addEventListener("click", () => { show(k); stop(); start(); }));
+    car.addEventListener("pointerenter", stop);
+    car.addEventListener("pointerleave", start);
+    car.addEventListener("focusin", stop);
+    car.addEventListener("focusout", start);
+    start();
+  }
 
   // Course cards: load and play the preview only on hover/focus
   document.querySelectorAll("[data-video]").forEach((card) => {
